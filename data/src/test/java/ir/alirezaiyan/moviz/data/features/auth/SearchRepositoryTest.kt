@@ -8,7 +8,7 @@ import kotlinx.coroutines.runBlocking
 class SearchRepositoryTest : UnitTest() {
 
     private val loginPayload = "IncorrectPayload"
-    private val loginEntity = MSMovie(result=true,errorMessage = "",title = "TestTitle",posterUrl = "invalid",ratings = emptyList())
+    private val loginEntity = MSMovie.mockObject
 
 
     @Test

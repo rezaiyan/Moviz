@@ -1,1 +1,1 @@
-include Modules.app, Modules.data, Modules.sdkBase
+include Modules.app, Modules.data, Modules.domain, Modules.sdkBase, Modules.sdkPlatform

@@ -1,0 +1,26 @@
+apply from: GradleDir.android
+
+dependencies {
+    implementation project(Modules.sdkBase)
+    implementation Libraries.koinAndroid
+    implementation Libraries.coroutinesAndroid
+    implementation SupportLibraries.archComponents
+    implementation SupportLibraries.appcompat
+    implementation SupportLibraries.constraintLayout
+    implementation SupportLibraries.design
+    implementation TestLibraries.junit
+    implementation TestLibraries.mockitoKotlin
+    implementation TestLibraries.junit
+    implementation TestLibraries.robolectric
+
+    testImplementation TestLibraries.rules
+    testImplementation TestLibraries.kluent
+    testImplementation TestLibraries.junit
+
+    androidTestImplementation TestLibraries.espressoCore
+    androidTestImplementation TestLibraries.espressoIntent
+    androidTestImplementation TestLibraries.xjunit
+    androidTestImplementation TestLibraries.runner
+    androidTestImplementation TestLibraries.rules
+}
+

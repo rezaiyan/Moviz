@@ -1,0 +1,13 @@
+apply from: GradleDir.android
+
+dependencies {
+    api project(Modules.data)
+    implementation project(Modules.sdkBase)
+    implementation project(Modules.sdkPlatform)
+    implementation Libraries.coroutinesAndroid
+    implementation Libraries.koinAndroid
+    implementation Libraries.retrofit
+    testImplementation TestLibraries.mockitoKotlin
+    testImplementation TestLibraries.junit
+}
+

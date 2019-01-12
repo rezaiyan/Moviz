@@ -21,7 +21,9 @@ object BuildPlugins {
 object Modules {
     val app = ":app"
     val data = ":data"
+    val domain = ":domain"
     val sdkBase = ":sdk-base"
+    val sdkPlatform = ":sdk-platform"
 }
 
 object Versions {
@@ -38,7 +40,7 @@ object Versions {
     val ktx = "1.0.0-alpha1"
 
 
-    val kotlin = "1.3.10"
+    val kotlin = "1.3.0"
     val kotlinCoroutines = "1.0.1"
     val timber = "4.7.1"
     val retrofit = "2.5.0"
@@ -57,6 +59,9 @@ object Versions {
     val mockitoInline = "2.8.9"
     val robolectric_version = "3.8"
     val kluent_version = "1.14"
+
+    val javaxInject_version = "1"
+    val javaxAnnotations_version = "1.0"
 }
 
 object Libraries {
@@ -91,6 +96,8 @@ object Libraries {
     val koinAndroid = "org.koin:koin-android:${Versions.koin}"
     val koinCore = "org.koin:koin-core:${Versions.koin}"
     val gson = "com.google.code.gson:gson:${Versions.gson}"
+    val javaxInject = "javax.inject:javax.inject:${Versions.javaxInject_version}"
+    val javaxAnnotation = "javax.annotation:jsr250-api:${Versions.javaxAnnotations_version}"
 
 }
 
@@ -106,7 +113,7 @@ object SupportLibraries {
 }
 
 object TestLibraries {
-    val kotlin = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlin}"
+    val kotlin = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlin}"
     val kotlinTest = "org.jetbrains.kotlin:kotlin-test-junit:${Versions.kotlin}"
     val androidJUnitRunner = "androidx.test.runner.AndroidJUnitRunner"
     val junit = "junit:junit:${Versions.junit}"

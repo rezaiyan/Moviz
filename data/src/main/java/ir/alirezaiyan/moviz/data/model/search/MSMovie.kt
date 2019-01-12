@@ -13,4 +13,9 @@ data class MSMovie(
         get() {
             return ratings.fold("") { summary, msRating -> "$summary\n${msRating.summary}" }
         }
+
+    companion object {
+        val mockObject =
+            MSMovie(result = true, errorMessage = "", title = "TestTitle", posterUrl = "invalid", ratings = emptyList())
+    }
 }
