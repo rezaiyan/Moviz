@@ -1,0 +1,37 @@
+apply from: GradleDir.android
+
+android{
+    Properties properties = new Properties()
+    properties.load(project.rootProject.file('local.properties').newDataInputStream())
+    def omdb_apikey = properties.getProperty('omdb_apikey')
+    buildTypes {
+        debug {
+            buildConfigField 'String', "OMDB_API_KEY", omdb_apikey
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField 'String', "OMDB_API_KEY", omdb_apikey
+        }
+    }
+}
+dependencies {
+    implementation project(Modules.sdkBase)
+    testImplementation project(Modules.sdkBase)
+    implementation Libraries.retrofit
+    implementation Libraries.okhttp
+    implementation Libraries.loggingInterceptor
+    implementation Libraries.moshiConverter
+    implementation Libraries.coroutinesAndroid
+    implementation Libraries.koinAndroid
+    implementation Libraries.gson
+    testImplementation TestLibraries.kotlin
+    testImplementation TestLibraries.kotlinTest
+    testImplementation TestLibraries.junit
+    testImplementation TestLibraries.mockitoKotlin
+    testImplementation TestLibraries.mockitoInline
+    testImplementation TestLibraries.kluent
+    testImplementation TestLibraries.retrofitMock
+    testImplementation TestLibraries.okhttpMockServer
+}
+
