@@ -1,32 +1,28 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
+
     compileSdkVersion App.compileSdk
+    testOptions.unitTests.includeAndroidResources = true
     defaultConfig {
-        applicationId App.id
         minSdkVersion App.minSdk
         targetSdkVersion App.targetSdk
         versionCode App.versionCode
         versionName App.versionName
-        testInstrumentationRunner TestLibraries.androidJUnitRunner
     }
+
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+
     }
+
 }
 
 dependencies {
     implementation Libraries.kotlin
-    implementation Libraries.koinAndroid
-    implementation SupportLibraries.appcompat
-    implementation SupportLibraries.constraintLayout
 }

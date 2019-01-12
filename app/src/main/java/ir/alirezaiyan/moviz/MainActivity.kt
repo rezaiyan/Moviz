@@ -1,5 +1,6 @@
 package ir.alirezaiyan.moviz
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
+
 
 class MainActivity : AppCompatActivity()
