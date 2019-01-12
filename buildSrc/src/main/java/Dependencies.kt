@@ -20,6 +20,8 @@ object BuildPlugins {
 
 object Modules {
     val app = ":app"
+    val data = ":data"
+    val sdkBase = ":sdk-base"
 }
 
 object Versions {
@@ -46,6 +48,7 @@ object Versions {
     val lifecycle = "2.0.0"
     val leakCanary = "1.6.2"
     val koin = "1.0.0"
+    val gson = "2.8.5"
 
     val junit = "4.12"
     val mockito = "2.18.3"
@@ -87,6 +90,7 @@ object Libraries {
     val koinViewModel = "org.koin:koin-androidx-viewmodel:${Versions.koin}"
     val koinAndroid = "org.koin:koin-android:${Versions.koin}"
     val koinCore = "org.koin:koin-core:${Versions.koin}"
+    val gson = "com.google.code.gson:gson:${Versions.gson}"
 
 }
 
