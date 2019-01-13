@@ -84,6 +84,7 @@ object Libraries {
     val moshiKotlin = "com.squareup.moshi:moshi-kotlin:${Versions.moshi}"
     val moshiCodegen = "com.squareup.moshi:moshi-kotlin-codegen:${Versions.moshi}"
     val moshiConverter = "com.squareup.retrofit2:converter-moshi:${Versions.retrofit}"
+    val gsonConverter = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
 
     val lifecycleExtensions = "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycle}"
     val lifecycleCompiler = "androidx.lifecycle:lifecycle-compiler:${Versions.lifecycle}"

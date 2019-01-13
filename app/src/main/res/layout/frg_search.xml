@@ -14,17 +14,22 @@
             android:textSize="16sp"
             android:layout_margin="20dp"
             android:id="@+id/tvResult"
+            android:textColor="@color/colorAccent"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/btnSearch"/>
 
     <EditText
             android:layout_width="match_parent"
             android:id="@+id/searchInput"
             android:inputType="text"
+            android:hint="@string/movie_name"
+            android:autofillHints="@string/movie_name"
             android:layout_margin="20dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent"
+            tools:targetApi="o"/>
 
     <Button
             android:layout_width="wrap_content"
@@ -34,5 +39,5 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_height="wrap_content"
-            android:text="Search"/>
+            android:text="@string/search"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,8 +1,8 @@
 package ir.alirezaiyan.moviz.feature.search
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import ir.alirezaiyan.moviz.R.layout
-import ir.alirezaiyan.moviz.R
 import ir.alirezaiyan.moviz.data.model.search.MSMovie
 import ir.alirezaiyan.moviz.sdk.base.exception.Failure
 import ir.alirezaiyan.moviz.sdk.platform.platform.BaseFragment
@@ -29,11 +29,16 @@ class SearchFragment : BaseFragment() {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun onSuccessLogin(movie: MSMovie?) {
         hideProgress()
-        tvResult.text = movie?.title
+        if (movie!!.response.toBoolean())
+            tvResult.text = "   ${movie.title} \n\n    Actors: ${movie.actors} \n\n   Genre: ${movie.genre}"
+        else
+            tvResult.text = "Not found"
     }
 
+    @SuppressLint("SetTextI18n")
     private fun onFailure(failure: Failure?) {
         hideProgress()
         when (failure) {

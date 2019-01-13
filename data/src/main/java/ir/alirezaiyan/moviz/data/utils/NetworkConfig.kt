@@ -4,14 +4,14 @@ import ir.alirezaiyan.moviz.data.feature.ApiService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
-import retrofit2.converter.moshi.MoshiConverterFactory
+import retrofit2.converter.gson.GsonConverterFactory
 
 
 fun provideRetrofit(isDebug: Boolean): ApiService {
     return Retrofit.Builder()
             .baseUrl("http://www.omdbapi.com")
             .client(provideHttpClient(isDebug))
-            .addConverterFactory(MoshiConverterFactory.create())
+        .addConverterFactory(GsonConverterFactory.create())
             .build().create(ApiService::class.java)
 }
 

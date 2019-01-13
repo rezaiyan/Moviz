@@ -2,16 +2,15 @@ apply from: GradleDir.android
 
 dependencies {
     implementation project(Modules.sdkBase)
-    implementation Libraries.koinAndroid
     implementation Libraries.coroutinesAndroid
     implementation SupportLibraries.archComponents
     implementation SupportLibraries.appcompat
     implementation SupportLibraries.constraintLayout
     implementation SupportLibraries.design
-    implementation TestLibraries.junit
-    implementation TestLibraries.mockitoKotlin
-    implementation TestLibraries.junit
-    implementation TestLibraries.robolectric
+    androidTestImplementation TestLibraries.junit
+    androidTestImplementation TestLibraries.mockitoKotlin
+    androidTestImplementation TestLibraries.junit
+    androidTestImplementation TestLibraries.robolectric
 
     testImplementation TestLibraries.rules
     testImplementation TestLibraries.kluent

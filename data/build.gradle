@@ -24,7 +24,7 @@ dependencies {
     implementation Libraries.moshiConverter
     implementation Libraries.coroutinesAndroid
     implementation Libraries.koinAndroid
-    implementation Libraries.gson
+    implementation Libraries.gsonConverter
     testImplementation TestLibraries.kotlin
     testImplementation TestLibraries.kotlinTest
     testImplementation TestLibraries.junit

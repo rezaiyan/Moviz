@@ -2,7 +2,7 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="match_parent" xmlns:tools="http://schemas.android.com/tools"
 >
 
     <include layout="@layout/toolbar"/>
@@ -12,7 +12,25 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/appbar"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    />
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+
+    <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminateOnly="true"
+            android:indeterminateTint="@color/colorTextPrimary"
+            android:paddingTop="-4dp"
+            android:paddingBottom="-4dp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            app:layout_anchorGravity="bottom|center"
+            app:layout_anchor="@+id/fragmentContainer"
+            tools:targetApi="lollipop"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
