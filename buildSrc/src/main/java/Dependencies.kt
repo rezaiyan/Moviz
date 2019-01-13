@@ -62,6 +62,8 @@ object Versions {
 
     val javaxInject_version = "1"
     val javaxAnnotations_version = "1.0"
+
+    val picasso = "2.71828"
 }
 
 object Libraries {
@@ -99,6 +101,7 @@ object Libraries {
     val gson = "com.google.code.gson:gson:${Versions.gson}"
     val javaxInject = "javax.inject:javax.inject:${Versions.javaxInject_version}"
     val javaxAnnotation = "javax.annotation:jsr250-api:${Versions.javaxAnnotations_version}"
+    val picasso = "com.squareup.picasso:picasso:${Versions.picasso}"
 
 }
 

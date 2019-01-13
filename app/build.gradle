@@ -38,6 +38,7 @@ dependencies {
     implementation Libraries.javaxInject
     implementation Libraries.javaxAnnotation
     implementation Libraries.coroutinesAndroid
+    implementation Libraries.picasso
 
     testImplementation TestLibraries.kluent
     testImplementation TestLibraries.mockitoInline

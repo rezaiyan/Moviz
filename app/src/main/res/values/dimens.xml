@@ -1,2 +1,3 @@
 <resources>
+    <dimen name="titleSize">25dp</dimen>
 </resources>
