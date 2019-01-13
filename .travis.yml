@@ -26,7 +26,7 @@ licenses:
     - 'android-sdk-preview-license-.+'
 
 skip_build:
-  ./data/build.gradle
+  /home/travis/build/rezaiyan/Moviz/data/build.gradle
 
 script:
   ./gradlew runUnitTests
