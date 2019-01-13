@@ -25,6 +25,9 @@ licenses:
     - 'google-gdk-license-.+'
     - 'android-sdk-preview-license-.+'
 
+skip_build:
+  ./data/build.gradle
+
 script:
   ./gradlew runUnitTests
 
