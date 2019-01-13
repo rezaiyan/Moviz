@@ -1,5 +1,7 @@
 # Movie search using clean architecture
 
+[![Build Status](https://travis-ci.com/rezaiyan/Moviz.svg?token=UzctkdBEqv7pYmuaDqu6&branch=master)](https://travis-ci.com/rezaiyan/Moviz)
+
 Libraries used
 ----
 
