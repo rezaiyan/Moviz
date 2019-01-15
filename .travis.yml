@@ -3,6 +3,10 @@ jdk: oraclejdk8
 sudo: false
 os: linux
 
+dependencies:
+  pre:
+    - source environmentSetup.sh && copyEnvVarsToGradleProperties
+
 android:
   components:
     - tools
