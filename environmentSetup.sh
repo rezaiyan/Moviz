@@ -3,11 +3,11 @@
 #
 # Android convention is to store your API keys in a local, non-versioned
 # gradle.properties file. Circle CI doesn't allow users to upload pre-populated
-# gradle.properties files to store this secret information, but instaed allows
+# gradle.properties files to store this secret information, but instead allows
 # users to store such information as environment variables.
 #
 # This script creates a local gradle.properties file on current the Circle CI
-# instance. It then reads environment variable TEST_API_KEY_ENV_VAR which a user
+# instance. It then reads environment variable API_KEY_ENV_VAR which a user
 # has defined in their Circle CI project settings environment variables, and
 # writes this value to the Circle CI instance's gradle.properties file.
 #
@@ -23,7 +23,9 @@
 function copyEnvVarsToGradleProperties {
     GRADLE_PROPERTIES=$HOME"/.gradle/gradle.properties"
     export GRADLE_PROPERTIES
-    echo "Gradle Properties should exist at $GRADLE_PROPERTIES"
+
+    touch $GRADLE_PROPERTIES
+
 
     if [ ! -f "$GRADLE_PROPERTIES" ]; then
         echo "Gradle Properties does not exist"
