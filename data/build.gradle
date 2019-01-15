@@ -1,9 +1,6 @@
 apply from: GradleDir.android
 
 android{
-    Properties properties = new Properties()
-    properties.load(project.rootProject.file('local.properties').newDataInputStream())
-    def omdb_apikey = properties.getProperty('omdb_apikey')
     buildTypes {
         debug {
             buildConfigField 'String', "OMDB_API_KEY", omdb_apikey

@@ -5,7 +5,7 @@ import ir.alirezaiyan.moviz.data.model.ErrorModel
 import ir.alirezaiyan.moviz.sdk.base.Either
 import ir.alirezaiyan.moviz.sdk.base.exception.Failure
 import retrofit2.Call
-
+import java.net.HttpURLConnection
 
 open class BaseRepository {
 
@@ -22,15 +22,19 @@ open class BaseRepository {
                 when {
                     response.isSuccessful -> Either.Right(transform((response.body()!!)))
                     (!response.isSuccessful && errorBody != null) -> {
+                        if (response.code() == HttpURLConnection.HTTP_INTERNAL_ERROR) {
+                            Either.Left(Failure.ServerError(response.code(), "Your API key is incorrect"))
+                        }else{
+                            val moshi = Moshi.Builder().build()
+                            val jsonAdapter = moshi.adapter<ErrorModel>(ErrorModel::class.java)
+                            val errorModel = jsonAdapter.fromJson(errorBody.string())
 
-                        val moshi = Moshi.Builder().build()
-                        val jsonAdapter = moshi.adapter<ErrorModel>(ErrorModel::class.java)
-                        val errorModel = jsonAdapter.fromJson(errorBody.string())
+                            val errorMessage = errorModel!!.msg
+                            val errorCode = response.code()
 
-                        val errorMessage = errorModel!!.msg
-                        val errorCode = response.code()
+                            Either.Left(Failure.ServerError(errorCode, errorMessage))
+                        }
 
-                        Either.Left(Failure.ServerError(errorCode, errorMessage))
                     }
                     else -> Either.Left(Failure.NetworkConnection())
                 }

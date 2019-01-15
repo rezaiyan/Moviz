@@ -75,7 +75,7 @@ class SearchFragment : BaseFragment() {
                 tvResult.text = "NetworkConnection"
             }
             is Failure.ServerError -> {
-                tvResult.text = "ServerError"
+                tvResult.text = failure.message
             }
         }
 
