@@ -1,8 +1,7 @@
-package ir.alirezaiyan.moviz.sdk.platform.interactor
+package ir.alirezaiyan.moviz.sdk.base.interactor
 
 import ir.alirezaiyan.moviz.sdk.base.Either
 import ir.alirezaiyan.moviz.sdk.base.exception.Failure
-import kotlinx.coroutines.*
 
 /**
  * Abstract class for a Use Case (Interactor in terms of Clean Architecture).
