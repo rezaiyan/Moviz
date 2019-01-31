@@ -1,12 +1,12 @@
 package ir.alirezaiyan.moviz.sdk.base
 
-import ir.alirezaiyan.moviz.sdk.base.test.UnitTest
+import ir.alirezaiyan.moviz.sdk.base.Either.Left
+import ir.alirezaiyan.moviz.sdk.base.Either.Right
+import ir.alirezaiyan.moviz.sdk.base.utils.UnitTest
 import org.amshove.kluent.shouldBe
 import org.amshove.kluent.shouldBeInstanceOf
 import org.amshove.kluent.shouldEqualTo
 import org.junit.Test
-import ir.alirezaiyan.moviz.sdk.base.Either.Right
-import ir.alirezaiyan.moviz.sdk.base.Either.Left
 
 class EitherTest : UnitTest() {
 

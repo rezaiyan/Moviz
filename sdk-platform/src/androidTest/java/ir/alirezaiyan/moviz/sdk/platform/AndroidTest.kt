@@ -2,7 +2,7 @@ package ir.alirezaiyan.moviz.sdk.platform
 
 import android.app.Application
 import android.content.Context
-import ir.alirezaiyan.moviz.sdk.base.test.InjectMocksRule
+import ir.alirezaiyan.moviz.sdk.base.utils.InjectMocksRule
 import ir.alirezaiyan.moviz.sdk.platform.platform.BaseActivity
 import org.junit.Rule
 import org.junit.runner.RunWith

@@ -1,4 +1,4 @@
-package ir.alirezaiyan.moviz.sdk.base.test
+package ir.alirezaiyan.moviz.sdk.base.utils
 
 import org.junit.rules.TestRule
 import org.mockito.MockitoAnnotations

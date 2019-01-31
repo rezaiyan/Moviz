@@ -1,9 +1,9 @@
 package ir.alirezaiyan.moviz.data.features.auth
 
 import ir.alirezaiyan.moviz.data.model.search.MSMovie
-import ir.alirezaiyan.moviz.sdk.base.test.UnitTest
-import org.junit.Test
+import ir.alirezaiyan.moviz.sdk.base.utils.UnitTest
 import kotlinx.coroutines.runBlocking
+import org.junit.Test
 
 class SearchRepositoryTest : UnitTest() {
 

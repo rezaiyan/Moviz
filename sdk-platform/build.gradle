@@ -2,7 +2,6 @@ apply from: GradleDir.android
 
 dependencies {
     implementation project(Modules.sdkBase)
-    implementation Libraries.coroutinesAndroid
     implementation SupportLibraries.archComponents
     implementation SupportLibraries.appcompat
     implementation SupportLibraries.constraintLayout
@@ -15,6 +14,7 @@ dependencies {
     testImplementation TestLibraries.rules
     testImplementation TestLibraries.kluent
     testImplementation TestLibraries.junit
+    testImplementation project(Modules.sdkBase)
 
     androidTestImplementation TestLibraries.espressoCore
     androidTestImplementation TestLibraries.espressoIntent

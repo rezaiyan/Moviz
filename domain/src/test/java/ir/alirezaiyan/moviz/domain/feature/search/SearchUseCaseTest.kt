@@ -3,7 +3,7 @@ package ir.alirezaiyan.moviz.domain.feature.search
 import ir.alirezaiyan.moviz.data.model.search.MSMovie
 import ir.alirezaiyan.moviz.sdk.base.Either
 import ir.alirezaiyan.moviz.sdk.base.exception.Failure
-import ir.alirezaiyan.moviz.sdk.base.test.UnitTest
+import ir.alirezaiyan.moviz.sdk.base.utils.UnitTest
 import kotlinx.coroutines.runBlocking
 import org.junit.Test
 
