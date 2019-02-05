@@ -1,6 +1,5 @@
-package ir.alirezaiyan.moviz.data.feature
+package ir.alirezaiyan.moviz.data
 
-import ir.alirezaiyan.moviz.data.BuildConfig
 import ir.alirezaiyan.moviz.data.model.search.MSMovie
 import retrofit2.Call
 import retrofit2.http.GET

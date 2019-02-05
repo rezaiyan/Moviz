@@ -1,7 +1,7 @@
 package ir.alirezaiyan.moviz.data.utils
 
 import com.nhaarman.mockitokotlin2.given
-import ir.alirezaiyan.moviz.data.feature.ApiService
+import ir.alirezaiyan.moviz.data.ApiService
 import ir.alirezaiyan.moviz.data.model.ErrorModel
 import ir.alirezaiyan.moviz.data.model.search.MSMovie
 import ir.alirezaiyan.moviz.sdk.base.Either

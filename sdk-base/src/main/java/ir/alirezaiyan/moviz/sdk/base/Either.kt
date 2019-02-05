@@ -1,5 +1,8 @@
 package ir.alirezaiyan.moviz.sdk.base
 
+import ir.alirezaiyan.moviz.sdk.base.Either.Left
+import ir.alirezaiyan.moviz.sdk.base.Either.Right
+
 
 /**
  * Represents a value of one of two possible types (a disjoint union).

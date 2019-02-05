@@ -1,6 +1,6 @@
 package ir.alirezaiyan.moviz.data.utils
 
-import ir.alirezaiyan.moviz.data.feature.ApiService
+import ir.alirezaiyan.moviz.data.ApiService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
