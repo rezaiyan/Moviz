@@ -53,18 +53,23 @@ class SearchFragment : BaseFragment() {
     @SuppressLint("SetTextI18n")
     private fun onSuccessLogin(movie: MSMovie?) {
         hideProgress()
-        if (movie!!.response.toBoolean()) {
-            searchInput.setText(movie.title)
 
-            val finalText = TextUtils.concat(
-                actorTitle.toSpan(titleSize.toInt()), " : ${movie.actors}".nextLine(),
-                genreTitle.toSpan(titleSize.toInt()), " : ${movie.genre}"
-            )
-            tvResult.text = finalText
+        movie?.let {
 
-            loadImage(movie.posterUrl)
-        } else
-            tvResult.text = "Not found"
+            if (it.response.toBoolean()) {
+                searchInput.setText(it.title)
+
+                val finalText = TextUtils.concat(
+                    actorTitle.toSpan(titleSize.toInt()), " : ${it.actors}".nextLine(),
+                    genreTitle.toSpan(titleSize.toInt()), " : ${it.genre}"
+                )
+                tvResult.text = finalText
+
+                loadImage(it.posterUrl)
+            } else
+                tvResult.text = "Not found"
+        }
+
     }
 
     @SuppressLint("SetTextI18n")
@@ -72,7 +77,7 @@ class SearchFragment : BaseFragment() {
         hideProgress()
         when (failure) {
             is Failure.NetworkConnection -> {
-                tvResult.text = "NetworkConnection"
+                tvResult.text = "Network connection"
             }
             is Failure.ServerError -> {
                 tvResult.text = failure.message
