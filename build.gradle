@@ -1,11 +1,14 @@
 buildscript {
     repositories {
+        maven { url Repo.fabric }
         google()
         jcenter()
     }
     dependencies {
         classpath BuildPlugins.androidGradle
         classpath BuildPlugins.kotlinGradlePlugin
+        classpath BuildPlugins.googleServices
+        classpath BuildPlugins.fabric
     }
 }
 

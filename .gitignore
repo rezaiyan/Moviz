@@ -4,3 +4,4 @@
 /.idea
 /build
 /buildSrc/build
+/app/google-services.json

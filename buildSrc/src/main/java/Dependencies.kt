@@ -16,6 +16,12 @@ object GradleDir {
 object BuildPlugins {
     val androidGradle = "com.android.tools.build:gradle:${Versions.gradle}"
     val kotlinGradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
+    val googleServices = "com.google.gms:google-services:4.2.0"
+    val fabric = "io.fabric.tools:gradle:1.26.1"
+}
+
+object Repo {
+    val fabric = "https://maven.fabric.io/public"
 }
 
 object Modules {
@@ -103,6 +109,8 @@ object Libraries {
     val javaxAnnotation = "javax.annotation:jsr250-api:${Versions.javaxAnnotations_version}"
     val picasso = "com.squareup.picasso:picasso:${Versions.picasso}"
 
+    val firebaseCore = "com.google.firebase:firebase-core:16.0.1"
+    val crashlytics = "com.crashlytics.sdk.android:crashlytics:2.9.9"
 }
 
 object SupportLibraries {
