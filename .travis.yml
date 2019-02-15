@@ -30,4 +30,5 @@ licenses:
     - 'android-sdk-preview-license-.+'
 
 script:
+  ./gradlew testReleaseUnitTest
   ./gradlew assembleRelease --stacktrace
