@@ -1,4 +1,4 @@
-package ir.alirezaiyan.moviz.sdk.platform
+package ir.alirezaiyan.moviz.sdk.test
 
 import android.app.Activity
 import androidx.annotation.IdRes
@@ -8,13 +8,10 @@ import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.intent.Intents.intended
 import androidx.test.espresso.intent.matcher.IntentMatchers
 import androidx.test.espresso.matcher.ViewMatchers
-import androidx.test.espresso.matcher.ViewMatchers.withEffectiveVisibility
-import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.espresso.matcher.ViewMatchers.*
 
 
-class Matchers {
-    fun <T : Activity> nextOpenActivityIs(clazz: Class<T>) {
+fun <T : Activity> nextOpenActivityIs(clazz: Class<T>) {
         intended(IntentMatchers.hasComponent(clazz.name))
     }
 
@@ -25,6 +22,6 @@ class Matchers {
     fun viewContainsText(@IdRes viewId: Int, @StringRes stringResource: Int) {
         onView(withId(viewId)).check(matches(withText(stringResource)))
     }
-}
+
 
 

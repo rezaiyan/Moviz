@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "862698647085",
+    "firebase_url": "https://moviz-6ba77.firebaseio.com",
+    "project_id": "moviz-6ba77",
+    "storage_bucket": "moviz-6ba77.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:862698647085:android:a67b00e3c0258c05",
+        "android_client_info": {
+          "package_name": "ir.alirezaiyan.moviz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "862698647085-029j624et8vccp1e5oge5grlflrgn7kv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZcbTE3r3JBxFREvPXWgIjTVGAFsag2ZQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

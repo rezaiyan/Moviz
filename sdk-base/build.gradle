@@ -1,10 +1,7 @@
-apply from: GradleDir.kotlin
+apply from: GradleDir.android
 // In this module we want to add some base classes are shared in whole of the project
 dependencies {
-    implementation Libraries.retrofit
-    implementation Libraries.coroutinesAndroid
-    implementation TestLibraries.junit
-    implementation TestLibraries.mockitoKotlin
+    testImplementation project(Modules.sdkTest)
     testImplementation TestLibraries.junit
     testImplementation TestLibraries.kluent
 }

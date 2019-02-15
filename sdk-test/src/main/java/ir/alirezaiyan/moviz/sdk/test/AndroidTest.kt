@@ -1,12 +1,9 @@
-package ir.alirezaiyan.moviz.sdk.platform
+package ir.alirezaiyan.moviz.sdk.test
 
 import android.app.Application
 import android.content.Context
-import ir.alirezaiyan.moviz.sdk.base.utils.InjectMocksRule
-import ir.alirezaiyan.moviz.sdk.platform.platform.BaseActivity
 import org.junit.Rule
 import org.junit.runner.RunWith
-import org.mockito.Mockito.mock
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.RuntimeEnvironment
 import org.robolectric.annotation.Config
@@ -28,7 +25,7 @@ abstract class AndroidTest {
 
     fun context(): Context = RuntimeEnvironment.application
 
-    fun activityContext(): Context = mock(BaseActivity::class.java)
+//    fun activityContext(): Context = mock(BaseActivity::class.java)
 
     internal class ApplicationStub : Application()
 }

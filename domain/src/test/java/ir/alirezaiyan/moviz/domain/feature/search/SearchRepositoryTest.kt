@@ -1,7 +1,7 @@
 package ir.alirezaiyan.moviz.domain.feature.search
 
 import ir.alirezaiyan.moviz.data.model.search.MSMovie
-import ir.alirezaiyan.moviz.sdk.base.utils.UnitTest
+import ir.alirezaiyan.moviz.sdk.test.UnitTest
 import kotlinx.coroutines.runBlocking
 import org.junit.Test
 

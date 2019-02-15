@@ -5,6 +5,9 @@ dependencies {
     implementation project(Modules.sdkBase)
     implementation project(Modules.sdkPlatform)
     implementation Libraries.coroutinesAndroid
+    implementation Libraries.retrofit
+    testImplementation project(Modules.sdkTest)
+    testImplementation TestLibraries.kluent
     testImplementation TestLibraries.mockitoKotlin
     testImplementation TestLibraries.junit
 }

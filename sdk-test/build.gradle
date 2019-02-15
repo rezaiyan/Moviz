@@ -1,0 +1,19 @@
+apply from: GradleDir.android
+
+dependencies {
+    implementation Libraries.retrofit
+    implementation Libraries.coroutinesAndroid
+    implementation TestLibraries.junit
+    implementation TestLibraries.mockitoKotlin
+    implementation TestLibraries.junit
+    implementation TestLibraries.kluent
+
+    implementation project(Modules.sdkPlatform)
+    implementation TestLibraries.espressoCore
+    implementation TestLibraries.espressoIntent
+    implementation TestLibraries.xjunit
+    implementation TestLibraries.runner
+    implementation TestLibraries.rules
+    implementation TestLibraries.robolectric
+
+}

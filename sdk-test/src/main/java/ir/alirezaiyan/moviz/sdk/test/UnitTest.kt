@@ -1,4 +1,4 @@
-package ir.alirezaiyan.moviz.sdk.base.utils
+package ir.alirezaiyan.moviz.sdk.test
 
 import org.junit.Rule
 import org.junit.runner.RunWith

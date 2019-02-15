@@ -2,13 +2,13 @@ package ir.alirezaiyan.moviz.sdk.base
 
 import ir.alirezaiyan.moviz.sdk.base.Either.Left
 import ir.alirezaiyan.moviz.sdk.base.Either.Right
-import ir.alirezaiyan.moviz.sdk.base.utils.UnitTest
+import ir.alirezaiyan.moviz.sdk.test.AndroidTest
 import org.amshove.kluent.shouldBe
 import org.amshove.kluent.shouldBeInstanceOf
 import org.amshove.kluent.shouldEqualTo
 import org.junit.Test
 
-class EitherTest : UnitTest() {
+class EitherTest : AndroidTest() {
 
     @Test fun `Either Right should return correct type`() {
         val result = Right("moviz")

@@ -1,6 +1,6 @@
 package ir.alirezaiyan.moviz.data.utils
 
-import ir.alirezaiyan.moviz.sdk.base.utils.UnitTest
+import ir.alirezaiyan.moviz.sdk.test.UnitTest
 import kotlinx.coroutines.runBlocking
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package ir.alirezaiyan.moviz.sdk.platform
+package ir.alirezaiyan.moviz.sdk.test
 
 
 import androidx.annotation.IdRes

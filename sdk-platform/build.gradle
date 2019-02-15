@@ -6,20 +6,11 @@ dependencies {
     implementation SupportLibraries.appcompat
     implementation SupportLibraries.constraintLayout
     implementation SupportLibraries.design
-    androidTestImplementation TestLibraries.junit
-    androidTestImplementation TestLibraries.mockitoKotlin
-    androidTestImplementation TestLibraries.junit
-    androidTestImplementation TestLibraries.robolectric
-
+    implementation Libraries.coroutinesCore
     testImplementation TestLibraries.rules
     testImplementation TestLibraries.kluent
     testImplementation TestLibraries.junit
-    testImplementation project(Modules.sdkBase)
+    testImplementation project(Modules.sdkTest)
 
-    androidTestImplementation TestLibraries.espressoCore
-    androidTestImplementation TestLibraries.espressoIntent
-    androidTestImplementation TestLibraries.xjunit
-    androidTestImplementation TestLibraries.runner
-    androidTestImplementation TestLibraries.rules
 }
 

@@ -30,6 +30,7 @@ object Modules {
     val domain = ":domain"
     val sdkBase = ":sdk-base"
     val sdkPlatform = ":sdk-platform"
+    val sdkTest = ":sdk-test"
 }
 
 object Versions {

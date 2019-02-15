@@ -3,9 +3,11 @@ package ir.alirezaiyan.moviz.sdk.platform.platform
 
 import androidx.lifecycle.MutableLiveData
 import ir.alirezaiyan.moviz.sdk.base.exception.Failure
-import ir.alirezaiyan.moviz.sdk.platform.AndroidTest
+import ir.alirezaiyan.moviz.sdk.test.AndroidTest
 import org.amshove.kluent.shouldBeInstanceOf
 import org.junit.Test
+
+
 
 class BaseViewModelTest : AndroidTest() {
 

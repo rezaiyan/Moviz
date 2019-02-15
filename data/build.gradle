@@ -14,7 +14,6 @@ android{
 }
 dependencies {
     implementation project(Modules.sdkBase)
-    testImplementation project(Modules.sdkBase)
     implementation Libraries.retrofit
     implementation Libraries.okhttp
     implementation Libraries.loggingInterceptor
@@ -22,6 +21,8 @@ dependencies {
     implementation Libraries.coroutinesAndroid
     implementation Libraries.koinAndroid
     implementation Libraries.gsonConverter
+
+    testImplementation project(Modules.sdkTest)
     testImplementation TestLibraries.kotlin
     testImplementation TestLibraries.kotlinTest
     testImplementation TestLibraries.junit
